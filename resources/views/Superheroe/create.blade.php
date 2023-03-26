@@ -1,8 +1,14 @@
-<h1>Formulario para un nuevo superheroe</h1>
+@extends('layouts.app')
+@section('content')
+<div class="container">
 
-<form action="{{url('/Superheroe')}}" method="post" enctype="multipart/form-data">
-@csrf
+    <h1>Formulario para un nuevo superheroe</h1>
 
-@include('Superheroe.form')
+    <form action="{{url('/Superheroe')}}" method="post" enctype="multipart/form-data">
+        @csrf
 
-</form>
+        @include('Superheroe.form', ['modo' => 'Crear Heroe'])
+    </form>
+
+</div>
+@endsection

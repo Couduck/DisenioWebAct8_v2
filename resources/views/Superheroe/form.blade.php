@@ -19,7 +19,7 @@
 <input type="text" name="InfoExtra" id="InfoExtra" value="{{isset($superheroe->InfoExtra)?$superheroe->InfoExtra:''}}">
 <br>
     
-<input type="submit" value="Guardar Heroe">
+<input type="submit" value="{{$modo}}">
 <br><br><br>
 
 <a href="{{url('Superheroe')}}">Regresar</a>

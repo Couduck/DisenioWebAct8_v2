@@ -1,8 +1,15 @@
-<h1>Formulario de edicion de heroe</h1>
+@extends('layouts.app')
+@section('content')
+<div class="container">
 
-<form action="{{url('/Superheroe/'.$superheroe->id)}}" method="post" enctype="multipart/form-data">
-    @csrf
-    {{method_field('PATCH')}}
+    <h1>Formulario de edicion de heroe</h1>
 
-    @include('Superheroe.form')
-</form>
+    <form action="{{url('/Superheroe/'.$superheroe->id)}}" method="post" enctype="multipart/form-data">
+        @csrf
+        {{method_field('PATCH')}}
+
+        @include('Superheroe.form', ['modo' => 'Guardar Cambios'])
+    </form>
+
+</div>
+@endsection
